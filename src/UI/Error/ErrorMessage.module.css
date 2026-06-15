@@ -1,9 +1,9 @@
 .error {
   text-align: center;
-  color: #dc2626;
+  color: var(--color-error);
   font-size: 14px;
   padding: 12px;
-  background-color: #fef2f2;
-  border-radius: 8px;
+  background-color: var(--color-error-bg);
+  border-radius: var(--radius-md);
   margin: 0;
 }

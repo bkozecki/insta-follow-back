@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "title": "Witaj w",
+    "subtitle": "Sprawdź kto nie obserwuje cię z powrotem. Wgraj eksport z Instagrama i poznaj odpowiedź w kilka sekund. Za darmo, prywatnie, bez zakładania konta.",
+    "cta": "Sprawdź obserwujących"
+  },
+  "upload": {
+    "followers": {
+      "label": "followers.json",
+      "hint": "Kliknij lub przeciągnij plik z obserwującymi"
+    },
+    "following": {
+      "label": "following.json",
+      "hint": "Kliknij lub przeciągnij plik z obserwowanymi"
+    },
+    "success": "Wgrano pomyślnie",
+    "dragActive": "Upuść plik tutaj",
+    "instruction": "Najpierw pobierz swoje dane z Instagrama",
+    "instructionLink": "Jak wyeksportować dane z Instagrama →",
+    "ariaLabel": "Wgraj {{filename}}",
+    "analyze": "Sprawdź wyniki"
+  },
+  "results": {
+    "notFollowingBack": "Nie śledzą cię z powrotem",
+    "notFollowedBack": "Nie śledzisz z powrotem",
+    "mutual": "Wzajemne obserwowanie",
+    "empty": {
+      "notFollowingBack": "Wszyscy których obserwujesz, obserwują cię z powrotem 🎉",
+      "notFollowedBack": "Obserwujesz wszystkich którzy cię obserwują",
+      "mutual": "Brak wzajemnych obserwujących"
+    },
+    "emptyDefault": "Brak użytkowników w tej kategorii",
+    "search": "Szukaj...",
+    "noResults": "Brak wyników dla \"{{query}}\""
+  },
+  "error": {
+    "readFailed": "Nie udało się odczytać pliku",
+    "invalidJson": "Nieprawidłowy format pliku JSON",
+    "readError": "Błąd podczas odczytu pliku"
+  },
+  "steps": {
+    "title": "Trzy kroki",
+    "one": {
+      "title": "Pobierz dane",
+      "description": "Instagram → Ustawienia → Twoja aktywność → Pobierz swoje informacje. Wybierz JSON. To kilka kliknięć więcej niż powinno być — ale to akurat ich wina.",
+      "videoLabel": "Poradnik wideo już wkrótce"
+    },
+    "two": {
+      "title": "Wgraj pliki",
+      "description": "Wrzuć pliki z obserwującymi i obserwowanymi. Wszystko działa w twojej przeglądarce. Nic nie jest wysyłane, zapisywane ani nigdzie przekazywane."
+    },
+    "three": {
+      "title": "Zobacz wyniki",
+      "description": "Sprawdź kto nie obserwuje cię z powrotem, kogo sam nie obserwujesz i swoich wzajemnych. Tyle."
+    }
+  },
+  "footer": {
+    "support": "Folo jest darmowe i open source. Bez reklam, bez śledzenia, bez haczyków. Jeśli się przydało, możesz postawić mi kawę ☕",
+    "buyMeCoffee": "Postaw mi kawę",
+    "privacy": "100% prywatnie — twoje dane nigdy nie opuszczają przeglądarki",
+    "openSource": "Open source"
+  },
+  "privacy": {
+    "badge": "Działa w całości w przeglądarce — nie zbieramy żadnych danych"
+  },
+  "modal": {
+    "dismiss": "Może później"
+  },
+  "language": "Język"
+}

@@ -4,25 +4,25 @@
   font-size: 12px;
   font-weight: 500;
   padding: 2px 8px;
-  border-radius: 20px;
+  border-radius: var(--radius-full);
 }
 
 .default {
-  background-color: #f3f4f6;
-  color: #6b7280;
+  background-color: var(--color-border);
+  color: var(--color-text-secondary);
 }
 
 .success {
-  background-color: #f0fdf4;
-  color: #16a34a;
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
 }
 
 .warning {
-  background-color: #fffbeb;
-  color: #d97706;
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
 }
 
 .info {
-  background-color: #eff6ff;
-  color: #2563eb;
+  background-color: var(--color-info-bg);
+  color: var(--color-info);
 }

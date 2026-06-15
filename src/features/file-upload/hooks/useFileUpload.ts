@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { parseFollowers, parseFollowing } from '@/adapters/instagram/parser'
 import type {
@@ -7,13 +8,40 @@ import type {
 } from '@/adapters/instagram/types'
 import type { FileType, UploadState, User } from '@/types/types'
 
+type FilesData = {
+  followers: User[] | null
+  following: User[] | null
+}
+
 export const useFileUpload = () => {
-  const [uploadState, setUploadState] = useState<UploadState>({
-    status: 'idle',
+  const { t } = useTranslation()
+  const [filesData, setFilesData] = useState<FilesData>({
+    followers: null,
+    following: null,
   })
+  const [loading, setLoading] = useState<FileType | null>(null)
+  const [uploadError, setUploadError] = useState<Error | null>(null)
+
+  const uploadState = useMemo((): UploadState => {
+    if (uploadError) return { status: 'error', error: uploadError }
+    if (filesData.followers && filesData.following) {
+      return {
+        status: 'ready',
+        followers: filesData.followers,
+        following: filesData.following,
+      }
+    }
+    if (filesData.followers)
+      return { status: 'partial', data: 'followers', users: filesData.followers }
+    if (filesData.following)
+      return { status: 'partial', data: 'following', users: filesData.following }
+    if (loading) return { status: 'uploading', data: loading }
+    return { status: 'idle' }
+  }, [filesData, loading, uploadError])
 
   const handleFileSelect = (file: File, fileType: FileType) => {
-    setUploadState({ status: 'uploading', data: fileType })
+    setLoading(fileType)
+    setUploadError(null)
 
     const reader = new FileReader()
 
@@ -21,10 +49,8 @@ export const useFileUpload = () => {
       const content = e.target?.result
 
       if (typeof content !== 'string') {
-        setUploadState({
-          status: 'error',
-          error: new Error('Nie udało się odczytać pliku'),
-        })
+        setLoading(null)
+        setUploadError(new Error(t('error.readFailed')))
         return
       }
 
@@ -35,34 +61,17 @@ export const useFileUpload = () => {
             ? parseFollowers(raw as RawInstagramFollowersFile)
             : parseFollowing(raw as RawInstagramFollowingFile)
 
-        setUploadState((prev) => {
-          if (prev.status === 'partial') {
-            return {
-              status: 'ready',
-              followers: fileType === 'followers' ? users : prev.users,
-              following: fileType === 'following' ? users : prev.users,
-            }
-          }
-
-          return {
-            status: 'partial',
-            data: fileType,
-            users,
-          }
-        })
+        setFilesData((prev) => ({ ...prev, [fileType]: users }))
+        setLoading(null)
       } catch {
-        setUploadState({
-          status: 'error',
-          error: new Error('Nieprawidłowy format pliku JSON'),
-        })
+        setLoading(null)
+        setUploadError(new Error(t('error.invalidJson')))
       }
     }
 
     reader.onerror = () => {
-      setUploadState({
-        status: 'error',
-        error: new Error('Błąd podczas odczytu pliku'),
-      })
+      setLoading(null)
+      setUploadError(new Error(t('error.readError')))
     }
 
     reader.readAsText(file)

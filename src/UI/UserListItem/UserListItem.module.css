@@ -1,10 +1,10 @@
 .item {
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   transition: background-color 0.1s;
 }
 
 .item:hover {
-  background-color: #f9fafb;
+  background-color: var(--color-primary-light);
 }
 
 .link {
@@ -14,23 +14,23 @@
   padding: 8px 10px;
   text-decoration: none;
   color: inherit;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
 }
 
 .username {
   font-size: 14px;
-  color: #374151;
+  color: var(--color-text-primary);
 }
 
 .icon {
-  color: #9ca3af;
+  color: var(--color-text-hint);
   flex-shrink: 0;
 }
 
 .item:hover .username {
-  color: #6366f1;
+  color: var(--color-primary);
 }
 
 .item:hover .icon {
-  color: #6366f1;
+  color: var(--color-primary);
 }

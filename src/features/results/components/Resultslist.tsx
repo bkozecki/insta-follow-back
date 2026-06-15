@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import type { User } from '@/types/types'
 import { Badge, SearchInput, UserListItem } from '@/UI'
@@ -14,8 +15,9 @@ type ResultsListProps = {
 export const ResultsList = ({
   title,
   users,
-  emptyMessage = 'Brak użytkowników w tej kategorii',
+  emptyMessage,
 }: ResultsListProps) => {
+  const { t } = useTranslation()
   const [query, setQuery] = useState('')
 
   const filtered = useMemo(
@@ -37,7 +39,9 @@ export const ResultsList = ({
 
       {filtered.length === 0 ? (
         <p className={styles.empty}>
-          {query ? `Brak wyników dla "${query}"` : emptyMessage}
+          {query
+            ? t('results.noResults', { query })
+            : (emptyMessage ?? t('results.emptyDefault'))}
         </p>
       ) : (
         <ul className={styles.list}>

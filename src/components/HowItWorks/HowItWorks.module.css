@@ -1,0 +1,173 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-hint);
+}
+
+.heading {
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--color-text-primary);
+}
+
+.privacyBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-success);
+  background-color: var(--color-success-bg);
+  border: 1px solid #bbf7d0;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+}
+
+.steps {
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.verticalLine {
+  display: none;
+}
+
+@media (min-width: 721px) {
+  .verticalLine {
+    display: block;
+    position: absolute;
+    left: 27px;
+    top: 16px;
+    bottom: 16px;
+    width: 1px;
+    background-color: var(--color-border);
+  }
+}
+
+.step {
+  position: relative;
+}
+
+@media (min-width: 721px) {
+  .step {
+    padding-left: 76px;
+  }
+}
+
+.stepIconDesktop {
+  display: none;
+}
+
+@media (min-width: 721px) {
+  .stepIconDesktop {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 54px;
+    height: 54px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.4);
+    z-index: 1;
+  }
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 721px) {
+  .card {
+    padding: 28px 32px;
+  }
+}
+
+.cardInner {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.stepIconMobile {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+@media (min-width: 721px) {
+  .stepIconMobile {
+    display: none;
+  }
+}
+
+.stepContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.stepMeta {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.stepNumber {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-primary-border);
+  font-variant-numeric: tabular-nums;
+}
+
+.stepTitle {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+.stepDesc {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.videoWrap {
+  margin-top: 20px;
+}
