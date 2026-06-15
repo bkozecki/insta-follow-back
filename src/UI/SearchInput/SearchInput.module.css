@@ -2,13 +2,16 @@
   width: 100%;
   padding: 8px 12px;
   font-size: 14px;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  font-family: var(--font-sans);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
   outline: none;
   transition: border-color 0.15s;
   box-sizing: border-box;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
 }
 
 .input:focus {
-  border-color: #6366f1;
+  border-color: var(--color-primary);
 }

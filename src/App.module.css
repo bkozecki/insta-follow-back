@@ -1,0 +1,51 @@
+.main {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 40px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+@media (max-width: 800px) {
+  .main {
+    padding: 0 24px 80px;
+    gap: 64px;
+  }
+}
+
+.analyzeWrap {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.analyzeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 14px 40px;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    transform 0.1s,
+    box-shadow 0.15s;
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.35);
+}
+
+.analyzeBtn:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.45);
+}
+
+.analyzeBtn:active {
+  transform: translateY(0);
+}

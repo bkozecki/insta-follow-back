@@ -1,0 +1,31 @@
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+  border: 1.5px dashed var(--color-primary-border);
+  border-radius: var(--radius-md);
+  margin-top: 16px;
+}
+
+.playBtn {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  padding-left: 3px;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--color-text-hint);
+  font-weight: 500;
+}

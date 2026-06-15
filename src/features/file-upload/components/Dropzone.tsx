@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { CheckCircle, Upload } from 'lucide-react'
 
 import type { FileType, UploadState } from '@/types/types'
@@ -21,6 +22,7 @@ export const Dropzone = ({
   uploadState,
   onFileSelect,
 }: DropzoneProps) => {
+  const { t } = useTranslation()
   const [isDragging, setIsDragging] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -75,7 +77,7 @@ export const Dropzone = ({
       role="button"
       tabIndex={0}
       onKeyDown={(e) => e.key === 'Enter' && inputRef.current?.click()}
-      aria-label={`Wgraj plik ${LABELS[fileType]}`}
+      aria-label={t('upload.ariaLabel', { filename: LABELS[fileType] })}
     >
       <input
         ref={inputRef}
@@ -88,7 +90,7 @@ export const Dropzone = ({
       {isSuccess ? <CheckCircle size={24} /> : <Upload size={24} />}
       <span className={styles.label}>{LABELS[fileType]}</span>
       <span className={styles.hint}>
-        {isSuccess ? 'Wgrano pomyślnie' : 'Kliknij lub przeciągnij plik'}
+        {isSuccess ? t('upload.success') : t(`upload.${fileType}.hint`)}
       </span>
     </div>
   )
