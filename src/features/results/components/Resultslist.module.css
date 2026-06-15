@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: #111827;
+}
+
+.count {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.search {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.search:focus {
+  border-color: #6366f1;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.item {
+  border-radius: 6px;
+  transition: background-color 0.1s;
+}
+
+.item:hover {
+  background-color: #f9fafb;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 6px;
+}
+
+.username {
+  font-size: 14px;
+  color: #374151;
+}
+
+.icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.item:hover .username {
+  color: #6366f1;
+}
+
+.item:hover .icon {
+  color: #6366f1;
+}
+
+.empty {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+  padding: 16px 0;
+  text-align: center;
+}
