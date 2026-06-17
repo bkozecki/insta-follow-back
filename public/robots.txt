@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://folo.foo/sitemap.xml
