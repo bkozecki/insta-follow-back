@@ -25,7 +25,7 @@
   align-items: center;
   gap: 6px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .coffee {
@@ -58,4 +58,19 @@
 
 .github:hover {
   color: #ffffff;
+}
+
+.legal {
+  padding: 10px 40px;
+  background-color: var(--color-text-primary);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .legal {
+    padding: 10px 24px;
+  }
 }

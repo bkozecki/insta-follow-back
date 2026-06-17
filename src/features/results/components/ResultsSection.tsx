@@ -17,16 +17,19 @@ export const ResultsSection = ({ results }: ResultsSectionProps) => {
         title={t('results.notFollowingBack')}
         users={results.notFollowedBack}
         emptyMessage={t('results.empty.notFollowingBack')}
+        exportFilename="folo-not-following-back"
       />
       <ResultsList
         title={t('results.notFollowedBack')}
         users={results.notFollowingBack}
         emptyMessage={t('results.empty.notFollowedBack')}
+        exportFilename="folo-not-following-you-back"
       />
       <ResultsList
         title={t('results.mutual')}
         users={results.mutualFollow}
         emptyMessage={t('results.empty.mutual')}
+        exportFilename="folo-mutual-followers"
       />
     </section>
   )

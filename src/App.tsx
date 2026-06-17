@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useTranslation } from 'react-i18next'
 
 import { AppHeader } from '@/components/AppHeader/AppHeader'
 import { CoffeeModal } from '@/components/CoffeeModal/CoffeeModal'
@@ -10,6 +9,7 @@ import { UploadSection } from '@/components/UploadSection/UploadSection'
 
 import { analyzeFollows } from '@/features/analysis/analyzeFollows'
 import { useFileUpload } from '@/features/file-upload/hooks/useFileUpload'
+import { ResultsPlaceholder } from '@/features/results/components/ResultsPlaceholder'
 import { ResultsSection } from '@/features/results/components/ResultsSection'
 
 import { ErrorMessage } from '@/UI/Error/ErrorMessage'
@@ -17,7 +17,6 @@ import { ErrorMessage } from '@/UI/Error/ErrorMessage'
 import styles from './App.module.css'
 
 export const App = () => {
-  const { t } = useTranslation()
   const { uploadState, handleFileSelect } = useFileUpload()
   const [resultsVisible, setResultsVisible] = useState(false)
   const [showCoffeeModal, setShowCoffeeModal] = useState(false)
@@ -48,15 +47,11 @@ export const App = () => {
         {uploadState.status === 'error' && (
           <ErrorMessage message={uploadState.error.message} />
         )}
-        {uploadState.status === 'ready' && !resultsVisible && (
-          <div className={styles.analyzeWrap}>
-            <button
-              className={styles.analyzeBtn}
-              onClick={() => { setResultsVisible(true) }}
-            >
-              {t('upload.analyze')}
-            </button>
-          </div>
+        {!resultsVisible && (
+          <ResultsPlaceholder
+            ready={uploadState.status === 'ready'}
+            onAnalyze={() => { setResultsVisible(true) }}
+          />
         )}
         {resultsVisible && results && <ResultsSection results={results} />}
       </main>

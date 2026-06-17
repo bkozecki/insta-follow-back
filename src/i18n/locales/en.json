@@ -18,7 +18,8 @@
     "instruction": "Download your Instagram data first",
     "instructionLink": "How to export your Instagram data →",
     "ariaLabel": "Upload {{filename}}",
-    "analyze": "Check results"
+    "analyze": "Check results",
+    "placeholder": "Upload both files above to see results"
   },
   "results": {
     "notFollowingBack": "Don't follow you back",
@@ -39,10 +40,10 @@
     "readError": "Error reading the file"
   },
   "steps": {
-    "title": "Three steps",
+    "title": "Three steps to clarity",
     "one": {
       "title": "Get your data",
-      "description": "Instagram → Settings → Your activity → Download your information. Choose JSON. It's a few clicks more than it should be — that part's on them.",
+      "description": "Instagram → Account Center → Your information and permissions → Export your information. Choose JSON. It's a few clicks more than it should be — that part's on them.",
       "videoLabel": "Tutorial coming soon"
     },
     "two": {
@@ -58,7 +59,14 @@
     "support": "Folo is free and open source. No ads, no tracking, no catch. If it was useful, maybe consider buying me a coffee ☕",
     "buyMeCoffee": "Buy me a coffee",
     "privacy": "100% private — your data never leaves your browser",
-    "openSource": "Open source"
+    "github": "GitHub",
+    "sourceAvailable": "Source available",
+    "legal": "Not affiliated with Instagram or Meta Platforms, Inc. · Use only your own exported data. Instagram is a trademark of Meta Platforms, Inc."
+  },
+  "export": {
+    "csv": "Export CSV",
+    "txt": "Export TXT",
+    "csvHeader": "username,profileUrl,followedAt"
   },
   "privacy": {
     "badge": "Runs entirely in your browser — no data collected"
