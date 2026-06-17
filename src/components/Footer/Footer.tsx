@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Code, Coffee, Shield } from 'lucide-react'
+import { Coffee, ExternalLink, ShieldCheck } from 'lucide-react'
 
 import styles from './Footer.module.css'
 
@@ -13,7 +13,7 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <span className={styles.privacy}>
-          <Shield size={13} />
+          <ShieldCheck size={13} />
           {t('footer.privacy')}
         </span>
         <a
@@ -31,9 +31,12 @@ export const Footer = () => {
           rel="noopener noreferrer"
           className={styles.github}
         >
-          <Code size={14} />
-          {t('footer.openSource')}
+          <ExternalLink size={14} />
+          {t('footer.sourceAvailable')}
         </a>
+      </div>
+      <div className={styles.legal}>
+        {t('footer.legal')}
       </div>
     </footer>
   )

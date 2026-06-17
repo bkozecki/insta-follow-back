@@ -9,12 +9,10 @@ export const HeroIllustration = () => (
       className={styles.svg}
       aria-hidden="true"
     >
-      {/* Background decorative circles */}
       <circle cx="320" cy="40" r="60" fill="#FFF7ED" />
       <circle cx="60" cy="280" r="40" fill="#FFF7ED" />
       <circle cx="340" cy="240" r="24" fill="#FED7AA" opacity="0.5" />
 
-      {/* Main card */}
       <rect
         x="40"
         y="40"
@@ -25,14 +23,12 @@ export const HeroIllustration = () => (
         style={{ filter: 'drop-shadow(0 8px 24px rgba(0,0,0,0.08))' }}
       />
 
-      {/* Card header */}
       <rect x="40" y="40" width="240" height="48" rx="16" fill="#F97316" />
       <rect x="40" y="72" width="240" height="16" fill="#F97316" />
       <circle cx="64" cy="64" r="12" fill="rgba(255,255,255,0.2)" />
       <rect x="84" y="58" width="100" height="8" rx="4" fill="rgba(255,255,255,0.9)" />
       <rect x="84" y="70" width="60" height="6" rx="3" fill="rgba(255,255,255,0.5)" />
 
-      {/* User rows */}
       {[0, 1, 2, 3].map((i) => (
         <g key={i} transform={`translate(0, ${String(i * 40)})`}>
           <circle cx="64" cy="116" r="14" fill="#FFF7ED" />
@@ -50,7 +46,6 @@ export const HeroIllustration = () => (
         </g>
       ))}
 
-      {/* Floating secondary card */}
       <rect
         x="200"
         y="180"
@@ -70,7 +65,6 @@ export const HeroIllustration = () => (
       <rect x="232" y="253" width="85" height="6" rx="3" fill="#E7E5E4" />
       <rect x="232" y="264" width="55" height="5" rx="2.5" fill="#F5F4F3" />
 
-      {/* Decorative dots */}
       <circle cx="160" cy="20" r="4" fill="#FED7AA" />
       <circle cx="175" cy="20" r="4" fill="#F97316" opacity="0.4" />
       <circle cx="190" cy="20" r="4" fill="#FED7AA" />

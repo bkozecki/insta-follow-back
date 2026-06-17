@@ -18,7 +18,8 @@
     "instruction": "Najpierw pobierz swoje dane z Instagrama",
     "instructionLink": "Jak wyeksportować dane z Instagrama →",
     "ariaLabel": "Wgraj {{filename}}",
-    "analyze": "Sprawdź wyniki"
+    "analyze": "Sprawdź wyniki",
+    "placeholder": "Wgraj oba pliki powyżej, aby zobaczyć wyniki"
   },
   "results": {
     "notFollowingBack": "Nie śledzą cię z powrotem",
@@ -39,10 +40,10 @@
     "readError": "Błąd podczas odczytu pliku"
   },
   "steps": {
-    "title": "Trzy kroki",
+    "title": "Trzy kroki do jasności",
     "one": {
       "title": "Pobierz dane",
-      "description": "Instagram → Ustawienia → Twoja aktywność → Pobierz swoje informacje. Wybierz JSON. To kilka kliknięć więcej niż powinno być — ale to akurat ich wina.",
+      "description": "Instagram → Account Center → Your information and permissions → Export your information. Wybierz JSON. To kilka kliknięć więcej niż powinno być — ale to akurat ich wina.",
       "videoLabel": "Poradnik wideo już wkrótce"
     },
     "two": {
@@ -58,7 +59,14 @@
     "support": "Folo jest darmowe i open source. Bez reklam, bez śledzenia, bez haczyków. Jeśli się przydało, możesz postawić mi kawę ☕",
     "buyMeCoffee": "Postaw mi kawę",
     "privacy": "100% prywatnie — twoje dane nigdy nie opuszczają przeglądarki",
-    "openSource": "Open source"
+    "github": "GitHub",
+    "sourceAvailable": "Source available",
+    "legal": "Nie jesteśmy powiązani z Instagramem ani Meta Platforms, Inc. · Korzystaj wyłącznie z własnych danych. Instagram jest znakiem towarowym Meta Platforms, Inc."
+  },
+  "export": {
+    "csv": "Eksportuj CSV",
+    "txt": "Eksportuj TXT",
+    "csvHeader": "username,profileUrl,followedAt"
   },
   "privacy": {
     "badge": "Działa w całości w przeglądarce — nie zbieramy żadnych danych"

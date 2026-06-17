@@ -87,7 +87,7 @@ export const Dropzone = ({
         onChange={handleInputChange}
       />
 
-      {isSuccess ? <CheckCircle size={24} /> : <Upload size={24} />}
+      {isSuccess ? <CheckCircle size={32} /> : <Upload size={32} />}
       <span className={styles.label}>{LABELS[fileType]}</span>
       <span className={styles.hint}>
         {isSuccess ? t('upload.success') : t(`upload.${fileType}.hint`)}

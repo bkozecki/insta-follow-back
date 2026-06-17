@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Download, Search, Shield, Upload } from 'lucide-react'
+import { Download, Search, ShieldCheck, Upload } from 'lucide-react'
 
 import { VideoPlaceholder } from '../VideoPlaceholder/VideoPlaceholder'
 import styles from './HowItWorks.module.css'
@@ -18,7 +18,7 @@ export const HowItWorks = () => {
       <div className={styles.sectionHeader}>
         <h2 className={styles.heading}>{t('steps.title')}</h2>
         <div className={styles.privacyBadge}>
-          <Shield size={14} />
+          <ShieldCheck size={14} />
           {t('privacy.badge')}
         </div>
       </div>
@@ -40,9 +40,13 @@ export const HowItWorks = () => {
                 <div className={styles.stepContent}>
                   <div className={styles.stepMeta}>
                     <span className={styles.stepNumber}>{index + 1}</span>
-                    <h3 className={styles.stepTitle}>{t(`steps.${stepKey}.title`)}</h3>
+                    <h3 className={styles.stepTitle}>
+                      {t(`steps.${stepKey}.title`)}
+                    </h3>
                   </div>
-                  <p className={styles.stepDesc}>{t(`steps.${stepKey}.description`)}</p>
+                  <p className={styles.stepDesc}>
+                    {t(`steps.${stepKey}.description`)}
+                  </p>
                   {hasVideo && (
                     <div className={styles.videoWrap}>
                       <VideoPlaceholder />
