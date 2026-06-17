@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 
 import type { AnalysisResult } from '@/types/types'
 
-import { ResultsList } from './Resultslist'
+import { ResultsList } from './ResultsList'
 import styles from './ResultsSection.module.css'
 
 type ResultsSectionProps = {
