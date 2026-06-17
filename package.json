@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "preview": "vite preview",
+    "generate:og": "node scripts/generate-og-image.mjs",
     "prepare": "husky",
     "lint-staged": {
       "*.{ts,tsx}": [
@@ -51,6 +52,7 @@
     "lint-staged": "^17.0.2",
     "lucide-react": "^1.18.0",
     "prettier": "^3.8.3",
+    "sharp": "^0.33.5",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
     "vite": "^8.0.10",
