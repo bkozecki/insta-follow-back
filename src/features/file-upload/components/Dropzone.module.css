@@ -59,3 +59,16 @@
 .success .hint {
   color: var(--color-success);
 }
+
+.error {
+  border-color: var(--color-error);
+  background-color: var(--color-error-bg);
+}
+
+.error .label {
+  color: var(--color-error);
+}
+
+.error .hint {
+  color: var(--color-error);
+}

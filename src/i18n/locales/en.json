@@ -37,7 +37,8 @@
   "error": {
     "readFailed": "Failed to read the file",
     "invalidJson": "Invalid JSON file format",
-    "readError": "Error reading the file"
+    "readError": "Error reading the file",
+    "wrongFile": "Wrong file — upload followers.json for the first slot and following.json for the second"
   },
   "steps": {
     "title": "Three steps to clarity",
@@ -74,5 +75,24 @@
   "modal": {
     "dismiss": "Maybe later"
   },
-  "language": "Language"
+  "language": "Language",
+  "faq": {
+    "title": "Frequently asked questions",
+    "one": {
+      "q": "Do I need to log in or create an account?",
+      "a": "No. Folo works entirely with your Instagram data export. No login required — just upload your followers.json and following.json files and get instant results."
+    },
+    "two": {
+      "q": "Is my Instagram data safe?",
+      "a": "Yes, completely. Folo runs 100% in your browser. Your data is never sent to any server, stored, or shared with anyone."
+    },
+    "three": {
+      "q": "How do I export my Instagram data?",
+      "a": "Open Instagram → Settings → Account Centre → Your information and permissions → Export your information → Create export. Select your account, then choose Export to device. Set date range to All time, format to JSON. Tap Customise information and select only Followers and following. You'll receive a download link by email within a few minutes."
+    },
+    "four": {
+      "q": "Is Folo free?",
+      "a": "Yes, completely free. No ads, no premium plan, no hidden fees — and it will stay that way."
+    }
+  }
 }

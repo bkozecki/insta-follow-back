@@ -37,7 +37,8 @@
   "error": {
     "readFailed": "Nie udało się odczytać pliku",
     "invalidJson": "Nieprawidłowy format pliku JSON",
-    "readError": "Błąd podczas odczytu pliku"
+    "readError": "Błąd podczas odczytu pliku",
+    "wrongFile": "Zły plik — wgraj followers.json w pierwsze pole i following.json w drugie"
   },
   "steps": {
     "title": "Trzy kroki do jasności",
@@ -74,5 +75,24 @@
   "modal": {
     "dismiss": "Może później"
   },
-  "language": "Język"
+  "language": "Język",
+  "faq": {
+    "title": "Często zadawane pytania",
+    "one": {
+      "q": "Czy muszę się logować lub zakładać konto?",
+      "a": "Nie. Folo działa wyłącznie na podstawie twojego eksportu danych z Instagrama. Wystarczy wgrać pliki followers.json i following.json — wyniki pojawią się natychmiast."
+    },
+    "two": {
+      "q": "Czy moje dane z Instagrama są bezpieczne?",
+      "a": "Tak. Folo działa w 100% w twojej przeglądarce. Twoje dane nie są nigdy wysyłane na serwer, zapisywane ani udostępniane."
+    },
+    "three": {
+      "q": "Jak wyeksportować dane z Instagrama?",
+      "a": "Otwórz Instagram → Ustawienia → Account Centre → Twoje informacje i uprawnienia → Eksportuj swoje informacje → Utwórz eksport. Wybierz swoje konto, następnie Eksportuj na urządzenie. Ustaw zakres dat na Cały czas, format na JSON. Stuknij Dostosuj informacje i zaznacz tylko Obserwujący i obserwowani. Link do pobrania dostaniesz mailem w ciągu kilku minut."
+    },
+    "four": {
+      "q": "Czy Folo jest darmowe?",
+      "a": "Tak, całkowicie darmowe. Bez reklam, bez planów premium, bez ukrytych opłat — i tak pozostanie."
+    }
+  }
 }

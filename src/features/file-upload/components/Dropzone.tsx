@@ -60,12 +60,15 @@ export const Dropzone = ({
     uploadState.status === 'ready' ||
     (uploadState.status === 'partial' && uploadState.data === fileType)
 
+  const isError = uploadState.status === 'error'
+
   return (
     <div
       className={[
         styles.dropzone,
         isDragging ? styles.dragging : '',
         isSuccess ? styles.success : '',
+        isError ? styles.error : '',
       ]
         .filter(Boolean)
         .join(' ')}
