@@ -2,10 +2,6 @@ import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { parseFollowers, parseFollowing } from '@/adapters/instagram/parser'
-import type {
-  RawInstagramFollowersFile,
-  RawInstagramFollowingFile,
-} from '@/adapters/instagram/types'
 import type { FileType, UploadState, User } from '@/types/types'
 
 type FilesData = {
@@ -58,14 +54,15 @@ export const useFileUpload = () => {
         const raw: unknown = JSON.parse(content)
         const users: User[] =
           fileType === 'followers'
-            ? parseFollowers(raw as RawInstagramFollowersFile)
-            : parseFollowing(raw as RawInstagramFollowingFile)
+            ? parseFollowers(raw)
+            : parseFollowing(raw)
 
         setFilesData((prev) => ({ ...prev, [fileType]: users }))
         setLoading(null)
-      } catch {
+      } catch (err) {
         setLoading(null)
-        setUploadError(new Error(t('error.invalidJson')))
+        const isWrongFile = err instanceof Error && err.message === 'WRONG_FILE'
+        setUploadError(new Error(t(isWrongFile ? 'error.wrongFile' : 'error.invalidJson')))
       }
     }
 

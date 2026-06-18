@@ -42,3 +42,10 @@
     grid-template-columns: 1fr;
   }
 }
+
+.errorMsg {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-error);
+  text-align: center;
+}

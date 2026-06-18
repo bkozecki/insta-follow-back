@@ -42,6 +42,9 @@ export const UploadSection = ({
           onFileSelect={(file) => { onFileSelect(file, 'following') }}
         />
       </div>
+      {uploadState.status === 'error' && (
+        <p className={styles.errorMsg}>{uploadState.error.message}</p>
+      )}
     </section>
   )
 }

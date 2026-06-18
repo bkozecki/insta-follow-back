@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 import { AppHeader } from '@/components/AppHeader/AppHeader'
 import { CoffeeModal } from '@/components/CoffeeModal/CoffeeModal'
+import { FAQ } from '@/components/FAQ/FAQ'
 import { Footer } from '@/components/Footer/Footer'
 import { HowItWorks } from '@/components/HowItWorks/HowItWorks'
 import { Navbar } from '@/components/Navbar/Navbar'
@@ -11,8 +12,6 @@ import { analyzeFollows } from '@/features/analysis/analyzeFollows'
 import { useFileUpload } from '@/features/file-upload/hooks/useFileUpload'
 import { ResultsPlaceholder } from '@/features/results/components/ResultsPlaceholder'
 import { ResultsSection } from '@/features/results/components/ResultsSection'
-
-import { ErrorMessage } from '@/UI/Error/ErrorMessage'
 
 import styles from './App.module.css'
 
@@ -44,16 +43,14 @@ export const App = () => {
           uploadState={uploadState}
           onFileSelect={handleFileSelect}
         />
-        {uploadState.status === 'error' && (
-          <ErrorMessage message={uploadState.error.message} />
-        )}
-        {!resultsVisible && (
+{!resultsVisible && (
           <ResultsPlaceholder
             ready={uploadState.status === 'ready'}
             onAnalyze={() => { setResultsVisible(true) }}
           />
         )}
         {resultsVisible && results && <ResultsSection results={results} />}
+        <FAQ />
       </main>
       <Footer />
       {showCoffeeModal && (
