@@ -3,7 +3,7 @@ import { Coffee, ExternalLink, ShieldCheck } from 'lucide-react'
 
 import styles from './Footer.module.css'
 
-const BUY_ME_A_COFFEE_URL = 'https://www.buymeacoffee.com/YOUR_USERNAME'
+const BUY_ME_A_COFFEE_URL = 'https://www.buymeacoffee.com/bartoszk'
 const GITHUB_URL = 'https://github.com/bkozecki/insta-follow-back'
 
 export const Footer = () => {
@@ -35,9 +35,7 @@ export const Footer = () => {
           {t('footer.sourceAvailable')}
         </a>
       </div>
-      <div className={styles.legal}>
-        {t('footer.legal')}
-      </div>
+      <div className={styles.legal}>{t('footer.legal')}</div>
     </footer>
   )
 }
