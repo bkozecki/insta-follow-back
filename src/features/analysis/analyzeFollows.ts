@@ -11,7 +11,7 @@ export const analyzeFollows = (
     (user) => !followingSet.has(user.username)
   )
 
-  const mutalFollowList = followers.filter((user) =>
+  const mutualFollowList = followers.filter((user) =>
     followingSet.has(user.username)
   )
 
@@ -21,7 +21,7 @@ export const analyzeFollows = (
 
   return {
     notFollowedBack: notFollowedBackList,
-    mutualFollow: mutalFollowList,
+    mutualFollow: mutualFollowList,
     notFollowingBack: notFollowingBackList,
   }
 }

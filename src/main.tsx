@@ -9,7 +9,7 @@ import '@/i18n/config'
 const rootElement = document.getElementById('root')
 
 if (!rootElement) {
-  throw new Error("Root element doesn't exisit in this document")
+  throw new Error("Root element doesn't exist in this document")
 }
 
 createRoot(rootElement).render(

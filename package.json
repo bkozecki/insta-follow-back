@@ -13,16 +13,16 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "generate:og": "node scripts/generate-og-image.mjs",
-    "prepare": "husky",
-    "lint-staged": {
-      "*.{ts,tsx}": [
-        "eslint --fix",
-        "prettier --write"
-      ],
-      "*.{json,md,css}": [
-        "prettier --write"
-      ]
-    }
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "i18next": "^26.3.1",

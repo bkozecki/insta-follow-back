@@ -24,7 +24,6 @@ export const HowItWorks = () => {
       </div>
 
       <ol className={styles.steps}>
-        <span className={styles.verticalLine} aria-hidden="true" />
         {STEPS.map(({ Icon, stepKey, hasVideo }, index) => (
           <li key={stepKey} className={styles.step}>
             <div className={styles.stepIconDesktop} aria-hidden="true">

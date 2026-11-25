@@ -9,20 +9,21 @@ export const LanguageSwitcher = () => {
 
   return (
     <div className={styles.switcher}>
-      {SUPPORTED_LANGUAGES.map((lang) => (
-        <button
-          key={lang}
-          className={[
-            styles.btn,
-            i18n.language === lang ? styles.active : '',
-          ]
-            .filter(Boolean)
-            .join(' ')}
-          onClick={() => void i18n.changeLanguage(lang)}
-        >
-          {lang.toUpperCase()}
-        </button>
-      ))}
+      {SUPPORTED_LANGUAGES.map((lang) => {
+        const isActive = i18n.resolvedLanguage === lang
+        return (
+          <button
+            key={lang}
+            className={[styles.btn, isActive ? styles.active : '']
+              .filter(Boolean)
+              .join(' ')}
+            aria-pressed={isActive}
+            onClick={() => void i18n.changeLanguage(lang)}
+          >
+            {lang.toUpperCase()}
+          </button>
+        )
+      })}
     </div>
   )
 }

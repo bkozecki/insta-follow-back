@@ -15,15 +15,15 @@ export const ResultsSection = ({ results }: ResultsSectionProps) => {
     <section className={styles.section}>
       <ResultsList
         title={t('results.notFollowingBack')}
-        users={results.notFollowedBack}
+        users={results.notFollowingBack}
         emptyMessage={t('results.empty.notFollowingBack')}
-        exportFilename="folo-not-following-back"
+        exportFilename="folo-dont-follow-you-back"
       />
       <ResultsList
         title={t('results.notFollowedBack')}
-        users={results.notFollowingBack}
+        users={results.notFollowedBack}
         emptyMessage={t('results.empty.notFollowedBack')}
-        exportFilename="folo-not-following-you-back"
+        exportFilename="folo-you-dont-follow-back"
       />
       <ResultsList
         title={t('results.mutual')}

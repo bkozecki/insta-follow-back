@@ -8,6 +8,10 @@ import pl from './locales/pl.json'
 export const SUPPORTED_LANGUAGES = ['en', 'pl'] as const
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number]
 
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.lang = lng
+})
+
 void i18n
   .use(LanguageDetector)
   .use(initReactI18next)

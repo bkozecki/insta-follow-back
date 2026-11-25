@@ -27,11 +27,23 @@
   background-color: var(--color-surface);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
-  transition: border-color 0.15s;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-.item[open] {
+.item:hover {
   border-color: var(--color-primary-border);
+}
+
+.open {
+  border-color: var(--color-primary-border);
+  box-shadow: var(--shadow-md);
+}
+
+.questionHeading {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 .question {
@@ -39,21 +51,30 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  width: 100%;
   padding: 20px 24px;
+  font-family: var(--font-sans);
   font-size: 16px;
   font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
   color: var(--color-text-primary);
+  background: none;
+  border: none;
   cursor: pointer;
-  list-style: none;
   user-select: none;
+  transition: color 0.2s ease;
 }
 
-.question::-webkit-details-marker {
-  display: none;
+.question:hover,
+.open .question {
+  color: var(--color-primary);
 }
 
-.question::marker {
-  display: none;
+.question:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+  border-radius: var(--radius-lg);
 }
 
 .icon {
@@ -63,6 +84,13 @@
   border-radius: 50%;
   background-color: var(--color-primary-soft);
   position: relative;
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.2s ease;
+}
+
+.open .icon {
+  transform: rotate(180deg);
 }
 
 .icon::before,
@@ -85,12 +113,30 @@
   width: 2px;
   height: 10px;
   transform: translate(-50%, -50%);
-  transition: transform 0.2s, opacity 0.2s;
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease;
 }
 
-.item[open] .icon::after {
+.open .icon::after {
   transform: translate(-50%, -50%) rotate(90deg);
   opacity: 0;
+}
+
+/* grid-template-rows 0fr -> 1fr animates to the content's natural height */
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.open .panel {
+  grid-template-rows: 1fr;
+}
+
+.panelInner {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .answer {
@@ -98,4 +144,15 @@
   font-size: 15px;
   color: var(--color-text-secondary);
   line-height: 1.7;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.open .answer {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.05s;
 }

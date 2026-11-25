@@ -28,7 +28,7 @@ export const Dropzone = ({
 
   const handleFile = (file: File | undefined) => {
     if (!file) return
-    if (!file.name.endsWith('.json')) return
+    if (!file.name.toLowerCase().endsWith('.json')) return
     onFileSelect(file)
   }
 
@@ -39,6 +39,7 @@ export const Dropzone = ({
 
   const handleDragLeave = (e: React.DragEvent) => {
     e.preventDefault()
+    if (e.currentTarget.contains(e.relatedTarget as Node | null)) return
     setIsDragging(false)
   }
 
@@ -54,6 +55,14 @@ export const Dropzone = ({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     handleFile(e.target.files?.[0])
+    // Reset so picking the same file again (e.g. after an error) still fires onChange
+    e.target.value = ''
+  }
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return
+    e.preventDefault()
+    inputRef.current?.click()
   }
 
   const isSuccess =
@@ -79,7 +88,7 @@ export const Dropzone = ({
       onDrop={handleDrop}
       role="button"
       tabIndex={0}
-      onKeyDown={(e) => e.key === 'Enter' && inputRef.current?.click()}
+      onKeyDown={handleKeyDown}
       aria-label={t('upload.ariaLabel', { filename: LABELS[fileType] })}
     >
       <input

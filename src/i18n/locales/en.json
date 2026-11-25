@@ -38,13 +38,13 @@
     "readFailed": "Failed to read the file",
     "invalidJson": "Invalid JSON file format",
     "readError": "Error reading the file",
-    "wrongFile": "Wrong file — upload followers.json for the first slot and following.json for the second"
+    "wrongFile": "Wrong file - upload followers.json for the first slot and following.json for the second"
   },
   "steps": {
     "title": "Three steps to clarity",
     "one": {
       "title": "Get your data",
-      "description": "Instagram → Account Center → Your information and permissions → Export your information. Choose JSON. It's a few clicks more than it should be — that part's on them.",
+      "description": "Instagram → Account Center → Your information and permissions → Export your information. Choose JSON. It's a few clicks more than it should be - that part's on them.",
       "videoLabel": "Tutorial coming soon"
     },
     "two": {
@@ -59,7 +59,7 @@
   "footer": {
     "support": "Folo is free and open source. No ads, no tracking, no catch. If it was useful, maybe consider buying me a coffee ☕",
     "buyMeCoffee": "Buy me a coffee",
-    "privacy": "100% private — your data never leaves your browser",
+    "privacy": "100% private - your data never leaves your browser",
     "github": "GitHub",
     "sourceAvailable": "Source available",
     "legal": "Not affiliated with Instagram or Meta Platforms, Inc. · Use only your own exported data. Instagram is a trademark of Meta Platforms, Inc."
@@ -70,17 +70,18 @@
     "csvHeader": "username,profileUrl,followedAt"
   },
   "privacy": {
-    "badge": "Runs entirely in your browser — no data collected"
+    "badge": "Runs entirely in your browser - no data collected"
   },
   "modal": {
-    "dismiss": "Maybe later"
+    "dismiss": "Maybe later",
+    "close": "Close"
   },
   "language": "Language",
   "faq": {
     "title": "Frequently asked questions",
     "one": {
       "q": "Do I need to log in or create an account?",
-      "a": "No. Folo works entirely with your Instagram data export. No login required — just upload your followers.json and following.json files and get instant results."
+      "a": "No. Folo works entirely with your Instagram data export. No login required - just upload your followers.json and following.json files and get instant results."
     },
     "two": {
       "q": "Is my Instagram data safe?",
@@ -92,7 +93,7 @@
     },
     "four": {
       "q": "Is Folo free?",
-      "a": "Yes, completely free. No ads, no premium plan, no hidden fees — and it will stay that way."
+      "a": "Yes, completely free. No ads, no premium plan, no hidden fees - and it will stay that way."
     }
   }
 }

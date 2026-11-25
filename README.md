@@ -1,6 +1,6 @@
 # Folo
 
-Find out who doesn't follow you back on Instagram — free, private, no account needed.
+Find out who doesn't follow you back on Instagram - free, private, no account needed.
 
 Upload your Instagram data export and Folo tells you who doesn't follow you back, who you don't follow back, and who your mutual followers are. Everything runs in your browser. No data is uploaded, stored, or sent anywhere.
 
@@ -11,7 +11,7 @@ Upload your Instagram data export and Folo tells you who doesn't follow you back
 - Search within each list
 - Export any list as CSV or TXT
 - English and Polish UI
-- Fully client-side — zero backend, zero tracking
+- Fully client-side - zero backend, zero tracking
 
 ## Getting started
 

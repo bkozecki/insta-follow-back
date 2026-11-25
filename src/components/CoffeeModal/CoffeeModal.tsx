@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Coffee, X } from 'lucide-react'
 
@@ -12,10 +13,23 @@ type CoffeeModalProps = {
 export const CoffeeModal = ({ onClose }: CoffeeModalProps) => {
   const { t } = useTranslation()
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [onClose])
+
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div
         className={styles.modal}
+        role="dialog"
+        aria-modal="true"
+        aria-label={t('footer.buyMeCoffee')}
         onClick={(e) => {
           e.stopPropagation()
         }}
@@ -23,7 +37,7 @@ export const CoffeeModal = ({ onClose }: CoffeeModalProps) => {
         <button
           className={styles.closeBtn}
           onClick={onClose}
-          aria-label="Close"
+          aria-label={t('modal.close')}
         >
           <X size={16} />
         </button>

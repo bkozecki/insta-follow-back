@@ -38,13 +38,13 @@
     "readFailed": "Nie udało się odczytać pliku",
     "invalidJson": "Nieprawidłowy format pliku JSON",
     "readError": "Błąd podczas odczytu pliku",
-    "wrongFile": "Zły plik — wgraj followers.json w pierwsze pole i following.json w drugie"
+    "wrongFile": "Zły plik - wgraj followers.json w pierwsze pole i following.json w drugie"
   },
   "steps": {
     "title": "Trzy kroki do jasności",
     "one": {
       "title": "Pobierz dane",
-      "description": "Instagram → Account Center → Your information and permissions → Export your information. Wybierz JSON. To kilka kliknięć więcej niż powinno być — ale to akurat ich wina.",
+      "description": "Instagram → Account Center → Your information and permissions → Export your information. Wybierz JSON. To kilka kliknięć więcej niż powinno być - ale to akurat ich wina.",
       "videoLabel": "Poradnik wideo już wkrótce"
     },
     "two": {
@@ -59,7 +59,7 @@
   "footer": {
     "support": "Folo jest darmowe i open source. Bez reklam, bez śledzenia, bez haczyków. Jeśli się przydało, możesz postawić mi kawę ☕",
     "buyMeCoffee": "Postaw mi kawę",
-    "privacy": "100% prywatnie — twoje dane nigdy nie opuszczają przeglądarki",
+    "privacy": "100% prywatnie - twoje dane nigdy nie opuszczają przeglądarki",
     "github": "GitHub",
     "sourceAvailable": "Source available",
     "legal": "Nie jesteśmy powiązani z Instagramem ani Meta Platforms, Inc. · Korzystaj wyłącznie z własnych danych. Instagram jest znakiem towarowym Meta Platforms, Inc."
@@ -70,17 +70,18 @@
     "csvHeader": "username,profileUrl,followedAt"
   },
   "privacy": {
-    "badge": "Działa w całości w przeglądarce — nie zbieramy żadnych danych"
+    "badge": "Działa w całości w przeglądarce - nie zbieramy żadnych danych"
   },
   "modal": {
-    "dismiss": "Może później"
+    "dismiss": "Może później",
+    "close": "Zamknij"
   },
   "language": "Język",
   "faq": {
     "title": "Często zadawane pytania",
     "one": {
       "q": "Czy muszę się logować lub zakładać konto?",
-      "a": "Nie. Folo działa wyłącznie na podstawie twojego eksportu danych z Instagrama. Wystarczy wgrać pliki followers.json i following.json — wyniki pojawią się natychmiast."
+      "a": "Nie. Folo działa wyłącznie na podstawie twojego eksportu danych z Instagrama. Wystarczy wgrać pliki followers.json i following.json - wyniki pojawią się natychmiast."
     },
     "two": {
       "q": "Czy moje dane z Instagrama są bezpieczne?",
@@ -92,7 +93,7 @@
     },
     "four": {
       "q": "Czy Folo jest darmowe?",
-      "a": "Tak, całkowicie darmowe. Bez reklam, bez planów premium, bez ukrytych opłat — i tak pozostanie."
+      "a": "Tak, całkowicie darmowe. Bez reklam, bez planów premium, bez ukrytych opłat - i tak pozostanie."
     }
   }
 }
